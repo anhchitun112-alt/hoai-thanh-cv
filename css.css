@@ -1,0 +1,201 @@
+/* Thiết lập chung cho toàn trang */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    color: #2d3748;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+/* Khung thẻ hồ sơ chính */
+.profile-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 720px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Ảnh bìa phía trên */
+.cover-photo {
+    height: 150px;
+    background: linear-gradient(90deg, #2563eb 0%, #3b82f6 50%, #06b6d4 100%);
+}
+
+/* Phần thông tin đầu trang */
+.header-info {
+    text-align: center;
+    padding: 0 30px 25px;
+    margin-top: -75px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    object-position: center 20%;
+}
+
+.header-info h1 {
+    font-size: 26px;
+    color: #1a202c;
+    margin-top: 12px;
+}
+
+.job-title {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 4px;
+}
+
+.location {
+    color: #718096;
+    font-size: 14px;
+    margin-top: 6px;
+}
+
+/* Phần nội dung chi tiết */
+.content {
+    padding: 30px;
+}
+
+.section {
+    margin-bottom: 28px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section h2 {
+    font-size: 18px;
+    color: #1a202c;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.section h2::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    background-color: #2563eb;
+    margin-right: 10px;
+    border-radius: 2px;
+}
+
+.section p {
+    color: #4a5568;
+    line-height: 1.65;
+    font-size: 15px;
+}
+
+/* Lưới kỹ năng */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-item {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.skill-item:hover {
+    background-color: #2563eb;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Học vấn & Kinh nghiệm */
+.timeline-item {
+    background-color: #f8fafc;
+    padding: 15px 18px;
+    border-radius: 10px;
+    border-left: 3px solid #cbd5e1;
+}
+
+.timeline-item h3 {
+    font-size: 16px;
+    color: #1e293b;
+}
+
+.timeline-item .time {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+    margin: 4px 0 8px;
+}
+
+/* Nút liên hệ */
+.social-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.btn-outline {
+    border: 1.5px solid #cbd5e1;
+    color: #334155;
+}
+
+.btn-outline:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    background-color: #eff6ff;
+}
+
+/* Tối ưu hiển thị trên màn hình điện thoại */
+@media (max-width: 480px) {
+    .content {
+        padding: 20px;
+    }
+    .social-buttons {
+        flex-direction: column;
+    }
+    .btn {
+        text-align: center;
+    }
+}
